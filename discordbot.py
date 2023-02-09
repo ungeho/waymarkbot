@@ -36,7 +36,7 @@ async def on_message(message):
         # \d+ \d{1,}と同じ、最長一致、最短一致にしたい場合は\d+?
         # (?:) グループ化のみに()を使いたい時に使える。後方参照をしない
         # (?:)? グループ化したものが0or1回
-        r_str = re.search(r" [R|r]=(-?\d+(?:\.\d+)?)", message.content)
+        r_str = re.search(r" [R|r]=(\d+(?:\.\d+)?)", message.content)
         ang_str = re.search(r" (?:Ang|ang|ANG)=(-?\d+(?:\.\d+)?)", message.content)
         if (r_str != None) and (ang_str != None):
             r   = float(r_str.group(1))
