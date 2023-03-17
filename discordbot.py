@@ -11,9 +11,11 @@ import discord
 # Botのアクセストークン 環境変数から
 TOKEN = os.environ['WAYMARKBOT_TOKEN']
 
+# Intentsオブジェクトを生成
+# 全てのIntentをTrue
+intents = discord.Intents.all()
 # 接続に必要なオブジェクトを生成
-client = discord.Client()
-
+client = discord.Client(intents=intents)
 
 # 起動時に動作する処理
 @client.event
